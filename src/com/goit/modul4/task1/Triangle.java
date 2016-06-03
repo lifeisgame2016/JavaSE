@@ -18,7 +18,11 @@ public class Triangle extends Figure{
     }
 
     public void setB(double b) {
-        this.b = b;
+        try {
+            this.b = b;
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 
     public String getName(){
