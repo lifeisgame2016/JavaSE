@@ -19,6 +19,11 @@ public class Circle extends Figure {
     }
 
     public double getArea(){
-        return pi*r*r;
+       try {
+           return pi * r * r;
+       } catch (Exception e){
+           System.out.print(e.getMessage());
+           return 0;
+       }
     }
 }
