@@ -5,6 +5,16 @@ public class Rectangle extends Figure {
     private double a;
     private double b;
 
+    Rectangle(double a, double b){
+        this.a = a;
+        this.b = b;
+    }
+
+    @Override
+    public String toString(){
+        return "a=" + this.a + " b=" + this.b;
+    }
+
     public double getA() {
         return a;
     }

@@ -5,19 +5,14 @@ package com.goit.modul4.task1;
  */
 public class Test {
     public static void main(String[] args){
-        Circle circle = new Circle();
-        circle.setR(4);
-        System.out.println("Circle: r=" + circle.getR() + " S=" + circle.getArea());
+        Figure circle = new Circle(4);
+        System.out.println("Circle: " + circle.toString() + " S=" + circle.getArea());
 
-        Rectangle rectangle = new Rectangle();
-        rectangle.setA(5);
-        rectangle.setB(7);
-        System.out.println("Rectangle: a=" + rectangle.getA() + " b=" + rectangle.getB() + " S=" + rectangle.getArea());
+        Figure rectangle = new Rectangle(3,4);
+        System.out.println("Rectangle: " + rectangle.toString() + " S=" + rectangle.getArea());
 
-        Triangle triangle = new Triangle();
-        triangle.setA(6);
-        triangle.setB(8);
-        System.out.println("Triangle: a=" + triangle.getA() + " b=" + triangle.getB() + " S=" + triangle.getArea());
+        Figure triangle = new Triangle(5,6);;
+        System.out.println("Triangle: " + triangle.toString() + " S=" + triangle.getArea());
 
     }
 }
