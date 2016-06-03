@@ -31,17 +31,26 @@ public class Dot {
     }
 
     public void distance(Dot dot){
-        double d;
-        d = Math.sqrt(Math.pow((dot.x-this.x),2)+Math.pow((dot.y-this.y),2));
-        System.out.println("x1=" + this.x + " y1=" + this.y);
-        System.out.println("x2=" + dot.x + " y2=" + dot.y);
-        System.out.println("d=" + d);
+        try {
+            double d;
+            d = Math.sqrt(Math.pow((dot.x - this.x), 2) + Math.pow((dot.y - this.y), 2));
+            System.out.println("x1=" + this.x + " y1=" + this.y);
+            System.out.println("x2=" + dot.x + " y2=" + dot.y);
+            System.out.println("d=" + d);
+        } catch (ArithmeticException e){
+            System.out.println("Arithmetical mistake");
+        }
     }
 
     public static void main (String[] args) {
-        Dot dot1 = new Dot(2,3);
-        Dot dot2 = new Dot(3,4);
+        try {
+            Dot dot1 = new Dot(2, 3);
+            Dot dot2 = new Dot(3, 4);
 
-        dot1.distance(dot2);
+            dot1.distance(dot2);
+        } catch (Exception e){
+            System.out.println("Exception");
+            System.out.println(e.getMessage());
+        }
     }
 }
