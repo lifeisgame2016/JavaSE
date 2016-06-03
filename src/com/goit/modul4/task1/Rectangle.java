@@ -1,8 +1,6 @@
 package com.goit.modul4.task1;
 
-/**
- * Created by Den on 31.05.2016.
- */
+
 public class Rectangle extends Figure {
     private double a;
     private double b;
@@ -12,7 +10,12 @@ public class Rectangle extends Figure {
     }
 
     public void setA(double a) {
-        this.a = a;
+
+        try {
+            this.a = a;
+        } catch (Exception e){
+            System.out.print(e.getMessage());
+        }
     }
 
     public double getB() {
@@ -28,6 +31,8 @@ public class Rectangle extends Figure {
     }
 
     public double getArea(){
+
         return a*b;
     }
+
 }
