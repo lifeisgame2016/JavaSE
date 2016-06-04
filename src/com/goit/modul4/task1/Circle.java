@@ -29,11 +29,6 @@ public class Circle extends Figure {
     }
 
     public double getArea(){
-       try {
-           return Math.PI * r * r;
-       } catch (Exception e){
-           System.out.print(e.getMessage());
-           return 0;
-       }
+        return Math.PI * r * r;
     }
 }
