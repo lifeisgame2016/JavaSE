@@ -20,12 +20,7 @@ public class Rectangle extends Figure {
     }
 
     public void setA(double a) {
-
-        try {
-            this.a = a;
-        } catch (Exception e){
-            System.out.print(e.getMessage());
-        }
+        this.a = a;
     }
 
     public double getB() {
