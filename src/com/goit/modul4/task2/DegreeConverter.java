@@ -1,7 +1,7 @@
 package com.goit.modul4.task2;
 
 public class DegreeConverter {
-    private int celsius;
+    private  int celsius;
     private int fahrenheit;
 
     public int getCelsius() {
@@ -20,15 +20,15 @@ public class DegreeConverter {
         this.fahrenheit = fahrenheit;
     }
 
-    public double calsiusToFahrenheit(){
+    public static double calsiusToFahrenheit(double celsius){
         double fahrenheit;
-        fahrenheit = (this.celsius * 1.8) + 32;
+        fahrenheit = (celsius * 1.8) + 32;
         return fahrenheit;
     }
 
-    public double fahrenheitToCelsius() {
+    public static double fahrenheitToCelsius(double fahrenheit) {
         double celsius;
-        celsius = (this.fahrenheit - 32) / 1.8;
+        celsius = (fahrenheit - 32) / 1.8;
         return celsius;
     }
 
@@ -36,10 +36,10 @@ public class DegreeConverter {
         DegreeConverter degreeConverter = new DegreeConverter();
 
         degreeConverter.setCelsius(20);
-        System.out.println(degreeConverter.getCelsius() + "'C = " + degreeConverter.calsiusToFahrenheit() + "'F");
+        System.out.println(degreeConverter.getCelsius() + "'C = " + degreeConverter.calsiusToFahrenheit(degreeConverter.getCelsius()) + "'F");
 
         degreeConverter.setFahrenheit(212);
-        System.out.println(degreeConverter.getFahrenheit() + "'F = " + degreeConverter.fahrenheitToCelsius() + "'C");
+        System.out.println(degreeConverter.getFahrenheit() + "'F = " + degreeConverter.fahrenheitToCelsius(degreeConverter.getFahrenheit()) + "'C");
 
     }
 }
