@@ -6,17 +6,19 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
 
-        int[] array = {2,7,1,8,-3,0,5,8,10,-2};
+        Scanner scanner = new Scanner(System.in);
 
-        // show an array
-        System.out.println("Array");
+        System.out.println("Enter array length:");
+        int sizeArray = scanner.nextInt();
+
+        int[] array = new int[sizeArray];
+        System.out.println("Enter " + sizeArray + " elements of array: ");
         for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+            array[i] = scanner.nextInt();
         }
-        System.out.println();
 
         //Found min and max
-        foundMinMax(array);
+        System.out.println("Min=" + foundMin(array) + " / Max=" + foundMax(array));
 
         //Sort
         sortInsert(array);
@@ -25,10 +27,8 @@ public class Solution {
         for (int element : array) {
             System.out.print(element + " ");
         }
-        System.out.println();
-
-
     }
+
 
     //Method: Sort insert
     public static void sortInsert(int[] arr) {
@@ -42,18 +42,26 @@ public class Solution {
         }
     }
 
-    public static void foundMinMax(int[] arr){
+    public static int foundMin(int[] arr){
         int min = arr[0];
-        int max = arr[0];
 
         for(int i = 1; i < arr.length; i++){
             if (min > arr[i]) {
                 min = arr[i];
-            } else if (max < arr[i]) {
+            }
+        }
+        return min;
+    }
+
+    public static int foundMax(int[] arr){
+        int max = arr[0];
+
+        for(int i = 1; i < arr.length; i++){
+            if (max < arr[i]) {
                 max = arr[i];
             }
         }
-        System.out.println("Min=" + min + " Max=" + max);
+        return max;
     }
 
 }
