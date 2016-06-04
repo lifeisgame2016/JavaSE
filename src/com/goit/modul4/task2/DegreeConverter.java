@@ -3,15 +3,11 @@ package com.goit.modul4.task2;
 public class DegreeConverter {
 
     public static double calsiusToFahrenheit(double celsius){
-        double fahrenheit;
-        fahrenheit = (celsius * 1.8) + 32;
-        return fahrenheit;
+        return (celsius * 1.8) + 32;
     }
 
     public static double fahrenheitToCelsius(double fahrenheit) {
-        double celsius;
-        celsius = (fahrenheit - 32) / 1.8;
-        return celsius;
+        return (fahrenheit - 32) / 1.8;
     }
 
     public static void main (String[] args) {
