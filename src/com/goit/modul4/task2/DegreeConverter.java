@@ -34,16 +34,12 @@ public class DegreeConverter {
 
     public static void main (String[] args) {
         DegreeConverter degreeConverter = new DegreeConverter();
-        try {
-            degreeConverter.setCelsius(20);
-            System.out.println(degreeConverter.getCelsius() + "'C = " + degreeConverter.calsiusToFahrenheit() + "'F");
 
-            degreeConverter.setFahrenheit(212);
-            System.out.println(degreeConverter.getFahrenheit() + "'F = " + degreeConverter.fahrenheitToCelsius() + "'C");
-        } catch(IllegalArgumentException e){
-            System.out.println("You entered the frong number of argument");
-        } catch (Exception e){
-            System.out.println("Thre was stil some exception");
-        }
+        degreeConverter.setCelsius(20);
+        System.out.println(degreeConverter.getCelsius() + "'C = " + degreeConverter.calsiusToFahrenheit() + "'F");
+
+        degreeConverter.setFahrenheit(212);
+        System.out.println(degreeConverter.getFahrenheit() + "'F = " + degreeConverter.fahrenheitToCelsius() + "'C");
+
     }
 }
