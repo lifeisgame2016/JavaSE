@@ -23,7 +23,7 @@ return (celsius * DISTANCE_POINT) + FREEZING_POINT;
         System.out.println(celsius + "'C = " + degreeConverter.calsiusToFahrenheit(celsius) + "'F");
 
         double fahrenheit = 212;
-        System.out.println(fahrenheit + "'F = " + degreeConverter.fahrenheitToCelsius(Double.valueOf("212r")) + "'C");
+        System.out.println(fahrenheit + "'F = " + degreeConverter.fahrenheitToCelsius(fahrenheit) + "'C");//Double.valueOf("212r")
         } catch (Exception e){
             System.out.println(e.fillInStackTrace());
         }
