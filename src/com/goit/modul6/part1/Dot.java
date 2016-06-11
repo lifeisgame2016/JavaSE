@@ -32,7 +32,7 @@ public class Dot {
 
     public double distance(Dot dot){
         if (dot == null){
-            throw new IllegalArgumentException("Dot must not be null");
+            throw new NullPointerException("Dot must not be null");
         }
         double d;
         d = Math.sqrt(Math.pow((dot.x - this.x), 2) + Math.pow((dot.y - this.y), 2));
@@ -45,11 +45,9 @@ public class Dot {
 
         System.out.println("x1=" + dot1.x + " y1=" + dot1.y);
         System.out.println("x2=" + dot2.x + " y2=" + dot2.y);
-        try {
+
         System.out.println("d=" + dot1.distance(dot2));
-        } catch(IllegalArgumentException e){
-            System.out.println(e.fillInStackTrace());
-        }
+
 
     }
 }
