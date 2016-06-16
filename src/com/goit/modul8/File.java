@@ -1,26 +1,22 @@
 package com.goit.modul8;
 
-/**
- * Created by Den on 29.05.2016.
- */
 public class File {
-    private String name;
+    private String fileName;
     private String type;
     private double size;
 
-    File(String name, String type, double size){
-        this.name = name;
+    public File(String fileName, String type, double size){
+        this.fileName = fileName;
         this.type = type;
         this.size = size;
     }
 
-
-    public String getName() {
-        return name;
+    public String getFileName() {
+        return fileName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
     public String getType() {
@@ -41,7 +37,8 @@ public class File {
 
     @Override
     public String toString(){
-        return String.format("%-20s%-10s%-10.2f", this.name, this.type, this.size);
+        return String.format("%-20s%-20s%-20.2f", this.fileName, this.type, this.size);
     }
+
 
 }
