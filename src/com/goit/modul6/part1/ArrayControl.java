@@ -17,7 +17,7 @@ public class ArrayControl {
     public void fillingArray(){
         Random random = new Random();
         for(int i = 0; i < array.length; i++){
-            array[i] = random.nextInt(100)-30;
+            array[i] = random.nextInt(100)-30; //Golden hammer Решение: передавать диапазлн в ввиде входных параметров метода
         }
     }
 

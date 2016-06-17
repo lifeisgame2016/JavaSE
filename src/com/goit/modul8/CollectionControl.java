@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
 
-import static javafx.scene.input.KeyCode.T;
 
 public class CollectionControl {
 
