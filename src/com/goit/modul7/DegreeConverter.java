@@ -1,13 +1,15 @@
 package com.goit.modul7;
 
 public class DegreeConverter {
+    public static final double WATER_FREEZES = 32.0;
+    public static final double POINTS_DISTANCE = 1.8;
 
     public static double calsiusToFahrenheit(double celsius){
-        return (celsius * 1.8) + 32; //Magic numbers Solution: вынести в переменные
+        return (celsius * POINTS_DISTANCE) + WATER_FREEZES; //Magic numbers Solution: вынести в переменные
     }
 
     public static double fahrenheitToCelsius(double fahrenheit) {
-        return (fahrenheit - 32) / 1.8; //Magic numbers Solution: вынести в переменные
+        return (fahrenheit - WATER_FREEZES) / POINTS_DISTANCE; //Magic numbers Solution: вынести в переменные
     }
 
     // Golden hammer Solution: Разбить на два класса DegreeConverter и Runner
