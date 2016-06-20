@@ -19,7 +19,7 @@ public class RunArray {
         ArrayControl array = new ArrayControl(sizeArray);
 
         System.out.println("Created array:");
-        array.fillingArray();
+        array.fillingArray(70);
         array.printArray();
 
         System.out.println("[Min value=" + array.foundMin() + " / max value=" + array.foundMax() + "]");
@@ -29,7 +29,7 @@ public class RunArray {
         array.printArray();
 
         System.out.println("Rebuild array:");
-        array.fillingArray();
+        array.fillingArray(80);
         array.printArray();
 
         array.foundMinMax();

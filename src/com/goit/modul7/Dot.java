@@ -38,16 +38,5 @@ public class Dot {
         d = Math.sqrt(Math.pow((dot.x - this.x), 2) + Math.pow((dot.y - this.y), 2));
         return d;
     }
-    // Golden hammer Solution: мыслить ООП, разбить на два класса
-    public static void main (String[] args) {
-        Dot dot1 = new Dot(2, 3);
-        Dot dot2 = new Dot(3, 4);
 
-        System.out.println("x1=" + dot1.x + " y1=" + dot1.y);
-        System.out.println("x2=" + dot2.x + " y2=" + dot2.y);
-
-        System.out.println("d=" + dot1.distance(dot2));
-
-
-    }
 }
