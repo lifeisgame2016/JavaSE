@@ -14,10 +14,10 @@ public class ArrayControl {
         this.array = new int[size];
     }
 
-    public void fillingArray(){
+    public void fillingArray(int renge){
         Random random = new Random();
         for(int i = 0; i < array.length; i++){
-            array[i] = random.nextInt(100)-30; //Golden hammer Решение: передавать диапазлн в ввиде входных параметров метода
+            array[i] = random.nextInt(renge)-(renge/2); //Golden hammer Решение: передавать диапазлн в ввиде входных параметров метода
         }
     }
 
