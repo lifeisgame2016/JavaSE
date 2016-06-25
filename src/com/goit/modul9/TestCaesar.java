@@ -3,7 +3,6 @@ package com.goit.modul9;
 
 import java.util.Arrays;
 import java.util.List;
-
 public class TestCaesar {
     public static void main(String[] args) {
         CipherCaesar caesar = new CipherCaesar();
@@ -25,7 +24,7 @@ public class TestCaesar {
                 {file.setFileName(caesar.encryption(file.getFileName(),3));
                 file.setType(caesar.encryption(file.getType(),3));}
                 );
-        caesar.printCollection(list);
+        PrintFile.printCollection(list);
         System.out.println("================================================");
         list
                 .stream()
@@ -33,7 +32,7 @@ public class TestCaesar {
                         {file.setFileName(caesar.decryption(file.getFileName(),3));
                             file.setType(caesar.decryption(file.getType(), 3));}
                 );
-        caesar.printCollection(list);
+        PrintFile.printCollection(list);
 
     }
 }
