@@ -26,6 +26,10 @@ public class ArrayControl {
         }
     }
 
+    public int[] getArray(){
+        return array;
+    }
+
     public void printArray(){
         System.out.println(Arrays.toString(array));
     }
