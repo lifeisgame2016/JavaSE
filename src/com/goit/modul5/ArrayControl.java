@@ -5,11 +5,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class ArrayControl {
-    public int[] array;
+    private int[] array;
     private int minValue;
     private int maxValue;
 
-    ArrayControl(int size){
+    public ArrayControl(int size){
         this.array = new int[size];
     }
 
@@ -17,6 +17,12 @@ public class ArrayControl {
         Random random = new Random();
         for(int i = 0; i < array.length; i++){
             array[i] = random.nextInt(100)-30;
+        }
+    }
+
+    public void setArray(int[] inArray){
+        for(int i = 0; i < inArray.length; i++){
+            array[i] = inArray[i];
         }
     }
 
