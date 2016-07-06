@@ -16,7 +16,8 @@ public class FigureTest {
         figure = new Circle(4);
         final double result = figure.getArea();
         double r = 4;
-        Assert.assertEquals(Math.PI*r*r,result,0);
+        double expectedValue = Math.PI*r*r;
+        Assert.assertEquals(expectedValue,result,0);
 
     }
 
@@ -26,7 +27,8 @@ public class FigureTest {
         final double result = figure.getArea();
         double a = 2;
         double b = 3;
-        Assert.assertEquals(a*b,result,0);
+        double expectedValue = a*b;
+        Assert.assertEquals(expectedValue,result,0);
     }
 
     @Test
@@ -35,7 +37,8 @@ public class FigureTest {
         final double result = figure.getArea();
         double a = 4;
         double b = 5;
-        Assert.assertEquals(0.5*a*b,result,0);
+        double expectedValue = 0.5*a*b;
+        Assert.assertEquals(expectedValue,result,0);
     }
 
 }
