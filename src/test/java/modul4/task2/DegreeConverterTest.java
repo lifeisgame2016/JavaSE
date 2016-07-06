@@ -19,16 +19,18 @@ public class DegreeConverterTest {
     @Test(timeout = 1000)
     public void calsiusToFahrenheit() throws Exception {
         double celsius = 10;
+        double expectedValue = (celsius * 1.8) + 32;
         double result = converter.calsiusToFahrenheit(celsius);
-        Assert.assertEquals(((celsius * 1.8) + 32),result,0);
+        Assert.assertEquals(expectedValue,result,0);
     }
 
 
     @Test
     public void fahrenheitToCelsius() throws Exception {
         double fahrenheit = 100;
+        double expectedValue = (fahrenheit - 32) / 1.8;
         double result = converter.fahrenheitToCelsius(fahrenheit);
-        Assert.assertEquals(((fahrenheit - 32) / 1.8),result,0);
+        Assert.assertEquals(expectedValue,result,0);
 
     }
 

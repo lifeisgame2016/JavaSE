@@ -41,8 +41,8 @@ public class DotTest {
         Dot dot2 = new Dot(x2,y2);
 
         double result = dot1.distance(dot2);
-        Assert.assertEquals(Math.sqrt(Math.pow((dot2.getX() - dot1.getX()), 2) + Math.pow((dot2.getY() - dot1.getY()), 2))
-                ,result,0);
+        double expectedValue = Math.sqrt(Math.pow((dot2.getX() - dot1.getX()), 2) + Math.pow((dot2.getY() - dot1.getY()), 2));
+        Assert.assertEquals(expectedValue,result,0);
     }
 
 }
