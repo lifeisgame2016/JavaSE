@@ -4,9 +4,7 @@ import com.goit.modul10.CipherCaesar;
 import com.goit.modul10.IOFile;
 import org.junit.*;
 import org.junit.Test;
-
 import java.io.*;
-
 import static org.junit.Assert.*;
 
 
@@ -36,9 +34,10 @@ public class IOFileTest {
 
         ioFile.writeFile(outputFile.getName(),text);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(outputFile));
-        String result = bufferedReader.readLine();
-        Assert.assertEquals(expectedText,result);
+        String resultText = bufferedReader.readLine();
         bufferedReader.close();
+        assertEquals(expectedText,resultText);
+
 
     }
 
@@ -56,10 +55,9 @@ public class IOFileTest {
 
         ioFile.readFile(outputFile.getName());
         BufferedReader bufferedReader = new BufferedReader(new FileReader(inputFile));
-        String result = bufferedReader.readLine();
-        Assert.assertEquals(expectedText,result);
+        String resultText = bufferedReader.readLine();
         bufferedReader.close();
-
+        assertEquals(expectedText,resultText);
 
     }
 
