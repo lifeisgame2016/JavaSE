@@ -25,14 +25,14 @@ public class ArrayControlTest {
 
     @Test(timeout = 1000)
     public void foundMin() throws Exception {
-        int result = arrayControl.foundMin();
-        Assert.assertEquals(expectedMin,result,0);
+        int resultMin = arrayControl.foundMin();
+        Assert.assertEquals(expectedMin,resultMin,0);
     }
 
     @Test(timeout = 1000)
     public void foundMax() throws Exception {
-        int result = arrayControl.foundMax();
-        Assert.assertEquals(expectedMax,result,0);
+        int resultMax = arrayControl.foundMax();
+        Assert.assertEquals(expectedMax,resultMax,0);
 
     }
 
@@ -48,10 +48,10 @@ public class ArrayControlTest {
 
     @Test(timeout = 1500)
     public void sortInsert() throws Exception {
-        int[] arrSort = {expectedMin,-2,1,2,4,5,6,8,9, expectedMax};
+        int[] expectedArea = {expectedMin,-2,1,2,4,5,6,8,9, expectedMax};
         arrayControl.sortInsert();
-        int[] resultArr = arrayControl.getArray();
-        Assert.assertArrayEquals(arrSort,resultArr);
+        int[] actualArea = arrayControl.getArray();
+        Assert.assertArrayEquals(expectedArea,actualArea);
 
     }
 
