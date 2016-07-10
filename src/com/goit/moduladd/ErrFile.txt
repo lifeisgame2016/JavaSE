@@ -1,0 +1,30 @@
+[22:54:33] Wolverine: public MyArrayList(int sizeList){
+        if(sizeList > 0){
+            element = new Object[sizeList];
+        } else if (sizeList == 0){
+            element = new Object[DEFAULT_SIZE];
+        } else {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+[22:54:36] Wolverine: тут
+[22:54:40] Wolverine: много лишнего
+[22:55:00] Wolverine: а так же есть ошибка смысловая
+[22:55:05] Wolverine: ща точно скажу
+[22:56:23] Wolverine: Вот так вполне достаточно))
+
+public MyArrayList(int sizeList){
+            element = new Object[sizeList];
+    }
+
+[22:57:14] Wolverine: Ну если ноль передали, ну и хрен с ними, нулем инициализируй, это уже проблема тех кто создает лист с 0 размером)
+[22:57:37] Wolverine: А кидать тут эксепш вообще не уместно
+[22:57:58] Wolverine: зайди в класс с этим эксепшеном и прочти для чего он
+[22:58:41] Wolverine: и самое интересное, если ты пытаешься сделать так:
+
+int[] arr = new int[-1];
+
+[22:58:52] Wolverine: Сразу получаешь NegativeArraySizeException
+[22:59:01] Wolverine: Прочти коммент и в его классе
+[23:27:23] Wolverine: http://winterbe.com/posts/2014/03/16/java-8-tutorial/
+[23:27:34] Wolverine: Глянь, потом скажешь что думаешь
