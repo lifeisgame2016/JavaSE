@@ -1,5 +1,7 @@
 package com.goit.moduladd;
 
+import java.util.Arrays;
+
 public class MyArrayList<E> {
 
     private static final int DEFAULT_SIZE = 4;
@@ -8,13 +10,7 @@ public class MyArrayList<E> {
     private int size;
 
     public MyArrayList(int sizeList){
-        if(sizeList > 0){
             element = new Object[sizeList];
-        } else if (sizeList == 0){
-            element = new Object[DEFAULT_SIZE];
-        } else {
-            throw new IndexOutOfBoundsException();
-        }
     }
 
     public MyArrayList(){
@@ -31,21 +27,21 @@ public class MyArrayList<E> {
 
     public boolean add(E addElement){
         if(element.length == size){
-            Object[] tmpArray = (E[]) new Object[element.length*2];
-            for(int i = 0; i < size; i++){
-                tmpArray[i] = element[i];
-            }
-            element = tmpArray;
+           rebuildingArray(size*2);
         }
         element[size++] = addElement;
         return true;
     }
 
     public E get(int index){
-        if((index < 0) || (index > element.length)){
+        if((index < 0) || (index > size-1)){
             throw new IndexOutOfBoundsException("index = " + index);
         } else {
             return (E) element[index];
         }
+    }
+
+    private void rebuildingArray(int newSize){
+        element = Arrays.copyOf(element,newSize);
     }
 }
